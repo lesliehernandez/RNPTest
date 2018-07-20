@@ -70,7 +70,7 @@
           </div>
           
           <div class="tab">Tell us about your project
-            <p><input placeholder="Text goes here." oninput="this.className = ''"></p>
+            <p><input placeholder="Text goes here" oninput="this.className = ''"></p>
           </div>
           
           <div class="tab">How can we best support your product?
@@ -197,8 +197,8 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
+    document.getElementById("regForm").submit(e => {})
+    return  alert( "Thank you. Your form has been submitted!" );
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
